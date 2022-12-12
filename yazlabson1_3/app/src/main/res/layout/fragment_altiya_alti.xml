@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_hp"
+    tools:context=".AltiyaAltiFragment">
+
+    <TextView
+        android:id="@+id/textViewPuanBirinci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oyuncu 1 : 0"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPuanIkinci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 : Oyuncu 2"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSayac"
+        android:layout_width="126dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:text="45"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSayac">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/altiButton1"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton2"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton3"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton4"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton5"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton6"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/altiButton7"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton8"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton9"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton10"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton11"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton12"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/altiButton13"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton14"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton15"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton16"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton17"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton18"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/altiButton19"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton20"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton21"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton22"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton23"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton24"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/altiButton25"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton26"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton27"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton28"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton29"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton30"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/altiButton31"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton32"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton33"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton34"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton35"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+            <ImageButton
+                android:id="@+id/altiButton36"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kart_arka_yuz" />
+
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

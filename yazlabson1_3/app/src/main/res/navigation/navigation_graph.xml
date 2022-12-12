@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/anaEkranFragment">
+    <fragment
+        android:id="@+id/anaEkranFragment"
+        android:name="com.yazlab.yazlabson1_3.AnaEkranFragment"
+        android:label="fragment_ana_ekran"
+        tools:layout="@layout/fragment_ana_ekran" >
+        <action
+            android:id="@+id/action_anaEkranFragment_to_girisYapFragment"
+            app:destination="@id/girisYapFragment" />
+        <action
+            android:id="@+id/action_anaEkranFragment_to_kayitOlFragment"
+            app:destination="@id/kayitOlFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/girisYapFragment"
+        android:name="com.yazlab.yazlabson1_3.GirisYapFragment"
+        android:label="fragment_giris_yap"
+        tools:layout="@layout/fragment_giris_yap" >
+        <action
+            android:id="@+id/action_girisYapFragment_to_oyunSecimFragment"
+            app:destination="@id/oyunSecimFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kayitOlFragment"
+        android:name="com.yazlab.yazlabson1_3.KayitOlFragment"
+        android:label="fragment_kayit_ol"
+        tools:layout="@layout/fragment_kayit_ol" />
+    <fragment
+        android:id="@+id/oyunSecimFragment"
+        android:name="com.yazlab.yazlabson1_3.OyunSecimFragment"
+        android:label="fragment_oyun_secim"
+        tools:layout="@layout/fragment_oyun_secim" />
+</navigation>
