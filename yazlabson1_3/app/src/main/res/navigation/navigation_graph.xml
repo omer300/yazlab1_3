@@ -34,5 +34,30 @@
         android:id="@+id/oyunSecimFragment"
         android:name="com.yazlab.yazlabson1_3.OyunSecimFragment"
         android:label="fragment_oyun_secim"
-        tools:layout="@layout/fragment_oyun_secim" />
+        tools:layout="@layout/fragment_oyun_secim" >
+        <action
+            android:id="@+id/action_oyunSecimFragment_to_ikiyeIkiFragment"
+            app:destination="@id/ikiyeIkiFragment" />
+        <action
+            android:id="@+id/action_oyunSecimFragment_to_dordeDortFragment"
+            app:destination="@id/dordeDortFragment" />
+        <action
+            android:id="@+id/action_oyunSecimFragment_to_altiyaAltiFragment"
+            app:destination="@id/altiyaAltiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ikiyeIkiFragment"
+        android:name="com.yazlab.yazlabson1_3.IkiyeIkiFragment"
+        android:label="fragment_ikiye_iki"
+        tools:layout="@layout/fragment_ikiye_iki" />
+    <fragment
+        android:id="@+id/dordeDortFragment"
+        android:name="com.yazlab.yazlabson1_3.DordeDortFragment"
+        android:label="fragment_dorde_dort"
+        tools:layout="@layout/fragment_dorde_dort" />
+    <fragment
+        android:id="@+id/altiyaAltiFragment"
+        android:name="com.yazlab.yazlabson1_3.AltiyaAltiFragment"
+        android:label="fragment_altiya_alti"
+        tools:layout="@layout/fragment_altiya_alti" />
 </navigation>
