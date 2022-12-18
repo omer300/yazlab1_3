@@ -39,7 +39,7 @@ class IkiyeIkiFragment : Fragment() {
     var id_array = ArrayList<String>()
     var score_array = ArrayList<Long>()
     var image_array = ArrayList<Any>()
-    var katsayi_array = ArrayList<Int>()
+    var katsayi_array = ArrayList<Long>()
     var firstActiveCard = -1
     var secActiveCard = -1
     var isActive = false
@@ -74,7 +74,7 @@ class IkiyeIkiFragment : Fragment() {
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
-                    val katsayi = 2
+                    val katsayi = 2L
                     println(document.id)
                     println(document.data["puan"])
                     println(document.data["resim"])
@@ -96,7 +96,7 @@ class IkiyeIkiFragment : Fragment() {
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
-                    val katsayi = 1
+                    val katsayi = 1L
                     println(document.id)
                     println(document.data["puan"])
                     println(document.data["resim"])
@@ -119,7 +119,7 @@ class IkiyeIkiFragment : Fragment() {
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
-                    val katsayi = 1
+                    val katsayi = 1L
                     println(document.id)
                     println(document.data["puan"])
                     println(document.data["resim"])
@@ -142,7 +142,7 @@ class IkiyeIkiFragment : Fragment() {
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
-                    val katsayi = 2
+                    val katsayi = 2L
                     println(document.id)
                     println(document.data["puan"])
                     println(document.data["resim"])
@@ -429,10 +429,10 @@ class IkiyeIkiFragment : Fragment() {
         } else {
             if(katsayi_array[firstActiveCard-1]==katsayi_array[secActiveCard-1]){
                 score1 = score1 - (((score_array[firstActiveCard-1]+score_array[secActiveCard-1])
-                        /katsayi_array[firstActiveCard-1])*((45-sayac)/10))
+                        /katsayi_array[firstActiveCard-1])*((45-sayac)/10.0))
             }else{
                 score1 = score1 - ((((score_array[firstActiveCard-1]+score_array[secActiveCard-1])/2)*
-                        katsayi_array[firstActiveCard-1]*katsayi_array[secActiveCard-1])*((45-sayac)/10))
+                        katsayi_array[firstActiveCard-1]*katsayi_array[secActiveCard-1])*((45-sayac)/10.0))
             }
 
             textScoreFirst.text = score1.toString()
@@ -468,8 +468,8 @@ class IkiyeIkiFragment : Fragment() {
             image_array.add(finalList[i]["image"]!!)
             id_array.add(finalList[i]["id"]!! as String)
             score_array.add(finalList[i]["score"]!! as Long)
-            katsayi_array.add(finalList[i]["katsayi"]!! as Int)
-            println("${finalList[i]["image"]!!} ${finalList[i]["id"]!! as String} ${finalList[i]["score"]!! as Long} ${finalList[i]["katsayi"]!! as Int}")
+            katsayi_array.add(finalList[i]["katsayi"]!! as Long)
+            println("${finalList[i]["image"]!!} ${finalList[i]["id"]!! as String} ${finalList[i]["score"]!! as Long} ${finalList[i]["katsayi"]!! as Long}")
 
         }
         activeCards_array = arrayOf<Boolean>(true,true,true,true)

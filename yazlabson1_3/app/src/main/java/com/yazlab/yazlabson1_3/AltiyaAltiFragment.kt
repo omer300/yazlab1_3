@@ -1527,10 +1527,10 @@ class AltiyaAltiFragment : Fragment() {
         } else {
             if(katsayi_array[firstActiveCard-1]==katsayi_array[secActiveCard-1]){
                 score1 = score1 - (((score_array[firstActiveCard-1]+score_array[secActiveCard-1])
-                        /katsayi_array[firstActiveCard-1])*((45-sayac)/10))
+                        /katsayi_array[firstActiveCard-1])*((45-sayac)/10.0))
             }else{
                 score1 = score1 - ((((score_array[firstActiveCard-1]+score_array[secActiveCard-1])/2)*
-                        katsayi_array[firstActiveCard-1]*katsayi_array[secActiveCard-1])*((45-sayac)/10))
+                        katsayi_array[firstActiveCard-1]*katsayi_array[secActiveCard-1])*((45-sayac)/10.0))
             }
 
             textScoreFirst6.text = score1.toString()
