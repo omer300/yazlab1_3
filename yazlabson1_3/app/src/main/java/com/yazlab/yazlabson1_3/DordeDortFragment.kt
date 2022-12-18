@@ -793,14 +793,20 @@ class DordeDortFragment : Fragment() {
             println("kazandın")
             Toast.makeText(activity,"Kazandınız !!", Toast.LENGTH_SHORT).show()
             stopTimer = true
-            mediaPlayer = MediaPlayer.create(activity, R.raw.win)
-            mediaPlayer?.start()
+            if(!stopSound){
+                mediaPlayer = MediaPlayer.create(activity, R.raw.win)
+                mediaPlayer?.start()
+            }
+
             /* Handler().postDelayed({
                  stopTimer = false
              }, 2000)*/
         } else {
-            mediaPlayer = MediaPlayer.create(activity, R.raw.correct)
-            mediaPlayer?.start()
+            if(!stopSound){
+                mediaPlayer = MediaPlayer.create(activity, R.raw.correct)
+                mediaPlayer?.start()
+            }
+
         }
 
 
@@ -862,30 +868,31 @@ class DordeDortFragment : Fragment() {
     fun createShufledArray(){
         temp_array = g_raw_array.toMutableList()
         var shufled = temp_array.shuffled()
-        for(i in 0..3){
+        for(i in 0..1){
             final_array.add(shufled[i])
             final_array.add(shufled[i])
         }
         temp_array = h_raw_array.toMutableList()
         shufled = temp_array.shuffled()
-        for(i in 0..3){
+        for(i in 0..1){
             final_array.add(shufled[i])
             final_array.add(shufled[i])
         }
         temp_array = r_raw_array.toMutableList()
         shufled = temp_array.shuffled()
-        for(i in 0..3){
+        for(i in 0..1){
             final_array.add(shufled[i])
             final_array.add(shufled[i])
         }
         temp_array = s_raw_array.toMutableList()
         shufled = temp_array.shuffled()
-        for(i in 0..3){
+        for(i in 0..1){
             final_array.add(shufled[i])
             final_array.add(shufled[i])
         }
         var tempArray = final_array.toMutableList()
         var finalList = tempArray.shuffled()
+        println(finalList)
         for(i in 0..15){
             image_array.add(finalList[i]["image"]!!)
             id_array.add(finalList[i]["id"]!! as String)
