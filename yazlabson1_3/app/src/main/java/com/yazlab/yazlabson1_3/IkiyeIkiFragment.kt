@@ -16,7 +16,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.fragment_altiya_alti.*
 import kotlinx.android.synthetic.main.fragment_ikiye_iki.*
+import kotlinx.android.synthetic.main.fragment_ikiye_iki.textTimer
 import java.util.*
 
 
@@ -55,6 +57,7 @@ class IkiyeIkiFragment : Fragment() {
                 }
             } else
                 if (sayac == 0) {
+                    activeCards_array = arrayOf<Boolean>(false,false,false,false)
                     if(!stopSound){
                         mediaPlayer = MediaPlayer.create(activity, R.raw.timeup)
                         mediaPlayer?.start()
@@ -172,7 +175,6 @@ class IkiyeIkiFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         t.schedule(tt, 1000, 1000);
         arguments?.let {
 
@@ -180,11 +182,13 @@ class IkiyeIkiFragment : Fragment() {
 
         }
         if (mode == 1) {
+            textTimer.text = 45.toString()
             textScoreSec.text = ""
             textScoreSec2.text = ""
         }
         if (mode==2){
             sayac =60
+            textTimer.text = 60.toString()
         }
         soundButton2.setOnClickListener{
             if(!stopSound){
@@ -465,6 +469,8 @@ class IkiyeIkiFragment : Fragment() {
             id_array.add(finalList[i]["id"]!! as String)
             score_array.add(finalList[i]["score"]!! as Long)
             katsayi_array.add(finalList[i]["katsayi"]!! as Int)
+            println("${finalList[i]["image"]!!} ${finalList[i]["id"]!! as String} ${finalList[i]["score"]!! as Long} ${finalList[i]["katsayi"]!! as Int}")
+
         }
         activeCards_array = arrayOf<Boolean>(true,true,true,true)
     }

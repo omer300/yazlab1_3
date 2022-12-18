@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.fragment_altiya_alti.*
 import kotlinx.android.synthetic.main.fragment_dorde_dort.*
 import kotlinx.android.synthetic.main.fragment_dorde_dort.dortButton2
 import kotlinx.android.synthetic.main.fragment_dorde_dort.textTimer
@@ -34,6 +35,10 @@ class DordeDortFragment : Fragment() {
     lateinit var temp_array : MutableList<HashMap<String,Any?>>
     var final_array = ArrayList<HashMap<String,Any?>>()
     var raw_array  = ArrayList<HashMap<String,Any?>>()
+    var g_raw_array  = ArrayList<HashMap<String,Any?>>()
+    var h_raw_array  = ArrayList<HashMap<String,Any?>>()
+    var r_raw_array  = ArrayList<HashMap<String,Any?>>()
+    var s_raw_array  = ArrayList<HashMap<String,Any?>>()
     var id_array = ArrayList<String>()
     var score_array = ArrayList<Long>()
     var image_array = ArrayList<Any>()
@@ -58,6 +63,10 @@ class DordeDortFragment : Fragment() {
                 }
             } else
                 if (sayac == 0) {
+                    activeCards_array = arrayOf<Boolean>(
+                        false,false,false,false,false,false,false,false,
+                        false,false,false,false,false,false,false,false
+                    )
                     if(!stopSound){
                         mediaPlayer = MediaPlayer.create(activity, R.raw.timeup)
                         mediaPlayer?.start()
@@ -86,7 +95,7 @@ class DordeDortFragment : Fragment() {
                         "katsayi" to katsayi,
                         "id" to document.id
                     )
-                    raw_array.add(data)
+                    g_raw_array.add(data)
                     temp++
                     if(temp==44){
                         createShufledArray()
@@ -108,7 +117,7 @@ class DordeDortFragment : Fragment() {
                         "katsayi" to katsayi,
                         "id" to document.id
                     )
-                    raw_array.add(data)
+                    h_raw_array.add(data)
                     temp++
                     if(temp==44){
                         createShufledArray()
@@ -131,7 +140,7 @@ class DordeDortFragment : Fragment() {
                         "katsayi" to katsayi,
                         "id" to document.id
                     )
-                    raw_array.add(data)
+                    r_raw_array.add(data)
                     temp++
                     if(temp==44){
                         createShufledArray()
@@ -154,7 +163,7 @@ class DordeDortFragment : Fragment() {
                         "katsayi" to katsayi,
                         "id" to document.id
                     )
-                    raw_array.add(data)
+                    s_raw_array.add(data)
                     temp++
                     if(temp==44){
                         createShufledArray()
@@ -191,10 +200,12 @@ class DordeDortFragment : Fragment() {
 
         }
         if (mode == 1) {
+            textTimer.text = "45"
             textScoreSec3.text = ""
             textScoreSec4.text = ""
         }
         if (mode==2){
+            textTimer.text = "60"
             sayac =60
         }
         dortButton1.setOnClickListener {
@@ -849,9 +860,27 @@ class DordeDortFragment : Fragment() {
         return BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
     }
     fun createShufledArray(){
-        temp_array = raw_array.toMutableList()
+        temp_array = g_raw_array.toMutableList()
         var shufled = temp_array.shuffled()
-        for(i in 0..7){
+        for(i in 0..3){
+            final_array.add(shufled[i])
+            final_array.add(shufled[i])
+        }
+        temp_array = h_raw_array.toMutableList()
+        shufled = temp_array.shuffled()
+        for(i in 0..3){
+            final_array.add(shufled[i])
+            final_array.add(shufled[i])
+        }
+        temp_array = r_raw_array.toMutableList()
+        shufled = temp_array.shuffled()
+        for(i in 0..3){
+            final_array.add(shufled[i])
+            final_array.add(shufled[i])
+        }
+        temp_array = s_raw_array.toMutableList()
+        shufled = temp_array.shuffled()
+        for(i in 0..3){
             final_array.add(shufled[i])
             final_array.add(shufled[i])
         }
@@ -862,6 +891,8 @@ class DordeDortFragment : Fragment() {
             id_array.add(finalList[i]["id"]!! as String)
             score_array.add(finalList[i]["score"]!! as Long)
             katsayi_array.add(finalList[i]["katsayi"]!! as Int)
+            println("${finalList[i]["image"]!!} ${finalList[i]["id"]!!} ${finalList[i]["score"]!!} ${finalList[i]["katsayi"]!!}")
+
         }
         activeCards_array = arrayOf<Boolean>(true,true,true,true,
             true,true,true,true,true,true,true,true,true,true,true,true)

@@ -33,6 +33,10 @@ class AltiyaAltiFragment : Fragment() {
     lateinit var temp_array : MutableList<HashMap<String,Any?>>
     var final_array = ArrayList<HashMap<String,Any?>>()
     var raw_array  = ArrayList<HashMap<String,Any?>>()
+    var g_raw_array  = ArrayList<HashMap<String,Any?>>()
+    var h_raw_array  = ArrayList<HashMap<String,Any?>>()
+    var r_raw_array  = ArrayList<HashMap<String,Any?>>()
+    var s_raw_array  = ArrayList<HashMap<String,Any?>>()
     var id_array = ArrayList<String>()
     var score_array = ArrayList<Long>()
     var image_array = ArrayList<Any>()
@@ -68,6 +72,17 @@ class AltiyaAltiFragment : Fragment() {
                         mediaPlayer = MediaPlayer.create(activity, R.raw.timeup)
                         mediaPlayer?.start()
                     }
+                    activeCards_array = arrayOf<Boolean>(
+                        false,false,false,false,
+                        false,false,false,false,
+                        false,false,false,false,
+                        false,false,false,false,
+                        false,false,false,false,
+                        false,false,false,false,
+                        false,false,false,false,
+                        false,false,false,false,
+                        false,false,false,false,
+                    )
                     sayac--
                 }
         }
@@ -92,7 +107,7 @@ class AltiyaAltiFragment : Fragment() {
                         "katsayi" to katsayi,
                         "id" to document.id
                     )
-                    raw_array.add(data)
+                    g_raw_array.add(data)
                     temp++
                     if(temp==44){
                         createShufledArray()
@@ -114,7 +129,7 @@ class AltiyaAltiFragment : Fragment() {
                         "katsayi" to katsayi,
                         "id" to document.id
                     )
-                    raw_array.add(data)
+                    h_raw_array.add(data)
                     temp++
                     if(temp==44){
                         createShufledArray()
@@ -137,7 +152,7 @@ class AltiyaAltiFragment : Fragment() {
                         "katsayi" to katsayi,
                         "id" to document.id
                     )
-                    raw_array.add(data)
+                    r_raw_array.add(data)
                     temp++
                     if(temp==44){
                         createShufledArray()
@@ -160,7 +175,7 @@ class AltiyaAltiFragment : Fragment() {
                         "katsayi" to katsayi,
                         "id" to document.id
                     )
-                    raw_array.add(data)
+                    s_raw_array.add(data)
                     temp++
                     if(temp==44){
                         createShufledArray()
@@ -181,7 +196,6 @@ class AltiyaAltiFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         t.schedule(tt, 1000, 1000);
         arguments?.let {
 
@@ -191,8 +205,10 @@ class AltiyaAltiFragment : Fragment() {
         if (mode == 1) {
             textScoreSec5.text = ""
             textScoreSec6.text = ""
+            textTimer.text = 45.toString()
         }
         if (mode==2){
+            textTimer.text = 60.toString()
             sayac =60
         }
         soundButton4.setOnClickListener{
@@ -1547,9 +1563,27 @@ class AltiyaAltiFragment : Fragment() {
         return BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
     }
     fun createShufledArray(){
-        temp_array = raw_array.toMutableList()
+        temp_array = g_raw_array.toMutableList()
         var shufled = temp_array.shuffled()
-        for(i in 0..17){
+        for(i in 0..7){
+            final_array.add(shufled[i])
+            final_array.add(shufled[i])
+        }
+        temp_array = h_raw_array.toMutableList()
+        shufled = temp_array.shuffled()
+        for(i in 0..7){
+            final_array.add(shufled[i])
+            final_array.add(shufled[i])
+        }
+        temp_array = r_raw_array.toMutableList()
+        shufled = temp_array.shuffled()
+        for(i in 0..5){
+            final_array.add(shufled[i])
+            final_array.add(shufled[i])
+        }
+        temp_array = s_raw_array.toMutableList()
+        shufled = temp_array.shuffled()
+        for(i in 0..5){
             final_array.add(shufled[i])
             final_array.add(shufled[i])
         }
@@ -1560,6 +1594,7 @@ class AltiyaAltiFragment : Fragment() {
             id_array.add(finalList[i]["id"]!! as String)
             score_array.add(finalList[i]["score"]!! as Long)
             katsayi_array.add(finalList[i]["katsayi"]!! as Int)
+            println("${finalList[i]["image"]!!} ${finalList[i]["id"]!! as String} ${finalList[i]["score"]!! as Long} ${finalList[i]["katsayi"]!! as Int}")
         }
         activeCards_array = arrayOf<Boolean>(true,true,true,true,
             true,true,true,true,true,true,true,true,true,true,true,true
