@@ -8,37 +8,76 @@
     tools:context=".DordeDortFragment">
 
 
+    <ImageView
+        android:id="@+id/soundButton3"
+        android:layout_width="36dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="64dp"
+        android:src="@android:drawable/ic_lock_silent_mode_off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewPuanBirinci"
+        android:id="@+id/textScoreFirst3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Oyuncu 1 : 0"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="Oyuncu 1 :"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewPuanIkinci"
+        android:id="@+id/textScoreFirst4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0 : Oyuncu 2"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="4dp"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textScoreSec3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text=" : Oyuncu 2"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewSayac"
-        android:layout_width="126dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="64dp"
+        android:id="@+id/textScoreSec4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="128dp"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textTimer"
+        android:layout_width="123dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="96dp"
         android:text="45"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,7 +88,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSayac">
+        app:layout_constraintTop_toBottomOf="@+id/textTimer">
 
         <TableRow
             android:layout_width="match_parent"
@@ -63,7 +102,7 @@
                 android:src="@drawable/kart_arka_yuz" />
 
             <ImageButton
-                android:id="@+id/ikiButton2"
+                android:id="@+id/dortButton2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="fitXY"

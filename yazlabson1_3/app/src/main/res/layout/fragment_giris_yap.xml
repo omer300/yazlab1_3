@@ -48,12 +48,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/buttonGirisYap2"
+            android:id="@+id/loginbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="32dp"
             android:minHeight="56dp"
             android:text="Log In"
             android:textColor="#D1C4E9" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

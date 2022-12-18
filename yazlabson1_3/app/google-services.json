@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1086364342871",
+    "project_id": "yazlabi-iii",
+    "storage_bucket": "yazlabi-iii.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086364342871:android:05ad2d1ed482ca4393a112",
+        "android_client_info": {
+          "package_name": "com.yazlab.yazlabson1_3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086364342871-q5vrlqc1gsdhjqg4evph993gv89gefh9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoOWtCpm1wB8_6SMDBpANqWGYcFywQ-ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086364342871-q5vrlqc1gsdhjqg4evph993gv89gefh9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

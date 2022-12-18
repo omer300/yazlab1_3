@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_hp"
+    tools:context=".fixedSelectGameFragment">
+
+
+    <RadioGroup
+        android:id="@+id/difficultgroup"
+        android:layout_width="153dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="296dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewdif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oyun Zorluğu Seçiniz : "
+            android:textColor="#F3F3F3" />
+
+        <RadioButton
+            android:id="@+id/radioButton2x2"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:text="2x2"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/radioButton4x4"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:text="4x4"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/radioButton6x6"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:text="6x6"
+            android:textColor="#FFFFFF" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/modegroup"
+        android:layout_width="138dp"
+        android:layout_height="129dp"
+        app:layout_constraintBottom_toTopOf="@+id/difficultgroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:text="Oyun Modu Seçiniz :"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/radiosingle"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:text="Tek Oyunculu"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/radiomany"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:text="Çok Oyunculu"
+            android:textColor="#FFFFFF" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/startgamebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Başla"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="52dp"
+        android:text="Hoşgeldiniz Kullanıcı !"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonChangePass"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonChangePass"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Şifre Değiş"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

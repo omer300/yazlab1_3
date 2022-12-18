@@ -22,42 +22,81 @@
         android:label="fragment_giris_yap"
         tools:layout="@layout/fragment_giris_yap" >
         <action
-            android:id="@+id/action_girisYapFragment_to_oyunSecimFragment"
-            app:destination="@id/oyunSecimFragment" />
+            android:id="@+id/action_girisYapFragment_to_fixedSelectGameFragment"
+            app:destination="@id/fixedSelectGameFragment" />
     </fragment>
     <fragment
         android:id="@+id/kayitOlFragment"
         android:name="com.yazlab.yazlabson1_3.KayitOlFragment"
         android:label="fragment_kayit_ol"
-        tools:layout="@layout/fragment_kayit_ol" />
-    <fragment
-        android:id="@+id/oyunSecimFragment"
-        android:name="com.yazlab.yazlabson1_3.OyunSecimFragment"
-        android:label="fragment_oyun_secim"
-        tools:layout="@layout/fragment_oyun_secim" >
+        tools:layout="@layout/fragment_kayit_ol" >
         <action
-            android:id="@+id/action_oyunSecimFragment_to_ikiyeIkiFragment"
-            app:destination="@id/ikiyeIkiFragment" />
-        <action
-            android:id="@+id/action_oyunSecimFragment_to_dordeDortFragment"
-            app:destination="@id/dordeDortFragment" />
-        <action
-            android:id="@+id/action_oyunSecimFragment_to_altiyaAltiFragment"
-            app:destination="@id/altiyaAltiFragment" />
+            android:id="@+id/action_kayitOlFragment_to_girisYapFragment"
+            app:destination="@id/girisYapFragment" />
     </fragment>
     <fragment
         android:id="@+id/ikiyeIkiFragment"
         android:name="com.yazlab.yazlabson1_3.IkiyeIkiFragment"
         android:label="fragment_ikiye_iki"
-        tools:layout="@layout/fragment_ikiye_iki" />
+        tools:layout="@layout/fragment_ikiye_iki" >
+        <argument
+            android:name="mode"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
     <fragment
         android:id="@+id/dordeDortFragment"
         android:name="com.yazlab.yazlabson1_3.DordeDortFragment"
         android:label="fragment_dorde_dort"
-        tools:layout="@layout/fragment_dorde_dort" />
+        tools:layout="@layout/fragment_dorde_dort" >
+        <argument
+            android:name="mode"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
     <fragment
         android:id="@+id/altiyaAltiFragment"
         android:name="com.yazlab.yazlabson1_3.AltiyaAltiFragment"
         android:label="fragment_altiya_alti"
-        tools:layout="@layout/fragment_altiya_alti" />
+        tools:layout="@layout/fragment_altiya_alti" >
+        <argument
+            android:name="mode"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/fixedSelectGameFragment"
+        android:name="com.yazlab.yazlabson1_3.fixedSelectGameFragment"
+        android:label="fragment_fixed_select_game"
+        tools:layout="@layout/fragment_fixed_select_game" >
+        <action
+            android:id="@+id/action_fixedSelectGameFragment_to_altiyaAltiFragment"
+            app:destination="@id/altiyaAltiFragment" />
+        <action
+            android:id="@+id/action_fixedSelectGameFragment_to_ikiyeIkiFragment"
+            app:destination="@id/ikiyeIkiFragment" />
+        <action
+            android:id="@+id/action_fixedSelectGameFragment_to_dordeDortFragment"
+            app:destination="@id/dordeDortFragment" />
+        <action
+            android:id="@+id/action_fixedSelectGameFragment_to_changePassword"
+            app:destination="@id/changePassword" />
+        <argument
+            android:name="id"
+            app:argType="string"
+            android:defaultValue="null" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePassword"
+        android:name="com.yazlab.yazlabson1_3.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" >
+        <argument
+            android:name="id"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_changePassword_to_fixedSelectGameFragment"
+            app:destination="@id/fixedSelectGameFragment" />
+    </fragment>
 </navigation>

@@ -27,11 +27,6 @@ class OyunSecimFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        buttonOyunaGirisYap.setOnClickListener {
-            val action = OyunSecimFragmentDirections.actionOyunSecimFragmentToIkiyeIkiFragment()
-            Navigation.findNavController(it).navigate(action)
-
-        }
 
     }
 
